@@ -1,0 +1,49 @@
+name: Generate Monkeytype Icon and README
+
+on:
+  push:
+    branches:
+      - icon-workflow-dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        pip install playwright
+        pip install beautifulsoup4
+
+    - name: Run monkeytype-icon.py
+      run: python monkeytype-icon.py
+
+    - name: Configure git
+      run: |
+          git config --global user.name "ridemountainpig"
+          git config --global user.email "lin0905580802@gmail.com"
+
+    - name: Commit and push changes
+      run: |
+          if git diff-index --quiet HEAD --; then
+            echo "No changes detected."
+          else
+            git add .
+            git commit -m "feat: update monkeytype icon"
+          fi
+      continue-on-error: true
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+          branch: icon-workflow-dev
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          
