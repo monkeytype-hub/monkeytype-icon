@@ -23,6 +23,10 @@ jobs:
         pip install playwright
         pip install beautifulsoup4
 
+    - name: Install playwright
+      run: |
+        playwright install
+
     - name: Run monkeytype-icon.py
       run: python monkeytype-icon.py
 
