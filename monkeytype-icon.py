@@ -44,7 +44,7 @@ def downloadMonkeytypeIcon():
         binary_data = base64.b64decode(
             faviconData[str(i)]['data'].split(',')[1])
 
-        filename = f'{faviconData[str(i)]["name"]}.png'
+        filename = f'{faviconData[str(i)]["name"]}.svg'
 
         with open(f'./monkeytype-icon/{filename}', 'wb') as f:
             f.write(binary_data)
@@ -54,4 +54,5 @@ def downloadMonkeytypeIcon():
 
 getMonkeytypeIconJson()
 downloadMonkeytypeIcon()
+generateReadme.generateIconTable()
 generateReadme.generateReadme()
