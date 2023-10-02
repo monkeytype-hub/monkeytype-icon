@@ -1,7 +1,7 @@
 
 | Theme | Icon | Link |
 | --- | --- | --- |
-    | 8008 | ![8008-favicon](https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/8008.svg) | `https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/8008.svg` |
+| 8008 | ![8008-favicon](https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/8008.svg) | `https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/8008.svg` |
 | 80s_after_dark | ![80s_after_dark-favicon](https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/80s_after_dark.svg) | `https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/80s_after_dark.svg` |
 | 9009 | ![9009-favicon](https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/9009.svg) | `https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/9009.svg` |
 | aether | ![aether-favicon](https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/aether.svg) | `https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/aether.svg` |
