@@ -44,7 +44,7 @@ def generateIconTable():
 """
 
     for i in range(len(faviconData)):
-        iconTable += f"| {faviconData[str(i)]['name']} | ![{faviconData[str(i)]['name']}-favicon](https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/{faviconData[str(i)]['name']}.svg) | `https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/{faviconData[str(i)]['name']}.svg` |\n"
+        iconTable += f"| {faviconData[str(i)]['name']} | ![{faviconData[str(i)]['name']}-favicon](https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/svg/{faviconData[str(i)]['name']}.svg) | `https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/svg/{faviconData[str(i)]['name']}.svg` |\n"
 
     with open("./asset/docs/icon-table.md", "w") as icon_table:
         icon_table.write(iconTable)
