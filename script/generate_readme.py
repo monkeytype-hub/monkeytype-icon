@@ -14,10 +14,17 @@ Add monkeytype icon to your Profile and Projects.
   example : (`nord light` => `nord_light`)
 - Copy the link or download icon to use.
 
-## MonkeyType Icons
+## MonkeyType Favicons
     """
 
     with open("./asset/docs/icon-table.md", "r") as icon_table:
+        md += icon_table.read()
+
+    md += """
+## MonkeyType Logo Icons
+    """
+
+    with open("./asset/docs/logo-icon-table.md", "r") as icon_table:
         md += icon_table.read()
 
     with open("./README.md", "w") as readme:
