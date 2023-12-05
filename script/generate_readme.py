@@ -8,6 +8,9 @@ def generateReadme():
 # MonkeyType Icon
 Add monkeytype icon to your Profile and Projects.
 
+##### [MonkeyType Favicons](#monkeytype-favicons)
+##### [MonkeyType Logo Icons](#monkeytype-logo-icons)
+
 ## Usage:
 - Press `Ctrl + f` on your keyboard, to bring out the search modal.
 - Enter the monkeytype theme of the icon you need, if the theme name have space, please replace it with `_`.<br/>
