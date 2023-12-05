@@ -8,8 +8,8 @@ def generateReadme():
 # MonkeyType Icon
 Add monkeytype icon to your Profile and Projects.
 
-##### [MonkeyType Favicons](#monkeytype-favicons)
-##### [MonkeyType Logo Icons](#monkeytype-logo-icons)
+##### [MonkeyType Favicons Link](#monkeytype-favicons)
+##### [MonkeyType Logo Icons Link](#monkeytype-logo-icons)
 
 ## Usage:
 - Press `Ctrl + f` on your keyboard, to bring out the search modal.
