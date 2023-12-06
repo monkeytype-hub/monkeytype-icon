@@ -63,7 +63,7 @@ def downloadMonkeytypeFavicon():
 
 
 def generateMonkeytypeLogoIcon():
-    url = "https://raw.githubusercontent.com/ridemountainpig/monkeytype-readme/master/monkeytype-data/themes.json"
+    url = "https://raw.githubusercontent.com/monkeytype-hub/monkeytype-readme/master/monkeytype-data/themes.json"
 
     try:
         response = requests.get(url)
@@ -133,7 +133,7 @@ def generateMonkeytypeLogoIcon():
 
             print(f"Image '{themeName}' generate successfully.")
 
-            logoIconTable += f"| {themeName} | ![{themeName}-logo-icon](https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/logo-svg/{themeName}.svg) | `https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/logo-svg/{themeName}.svg` |\n"
+            logoIconTable += f"| {themeName} | ![{themeName}-logo-icon](https://raw.githubusercontent.com/monkeytype-hub/monkeytype-icon/master/monkeytype-icon/logo-svg/{themeName}.svg) | `https://raw.githubusercontent.com/monkeytype-hub/monkeytype-icon/master/monkeytype-icon/logo-svg/{themeName}.svg` |\n"
 
         with open(f'./asset/docs/logo-icon-table.md', 'w') as f:
             f.write(logoIconTable)

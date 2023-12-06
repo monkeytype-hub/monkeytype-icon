@@ -3,7 +3,7 @@ import json
 
 def generateReadme():
     md = """
-![](https://github.com/ridemountainpig/monkeytype-icon/blob/master/asset/image/monkeytype-icon-banner-rounded.png?raw=true)
+![](https://github.com/monkeytype-hub/monkeytype-icon/blob/master/asset/image/monkeytype-icon-banner-rounded.png?raw=true)
 
 # MonkeyType Icon
 Add monkeytype icon to your Profile and Projects.
@@ -54,7 +54,7 @@ def generateIconTable():
 """
 
     for i in range(len(faviconData)):
-        iconTable += f"| {faviconData[str(i)]['name']} | ![{faviconData[str(i)]['name']}-favicon](https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/svg/{faviconData[str(i)]['name']}.svg) | `https://raw.githubusercontent.com/ridemountainpig/monkeytype-icon/master/monkeytype-icon/svg/{faviconData[str(i)]['name']}.svg` |\n"
+        iconTable += f"| {faviconData[str(i)]['name']} | ![{faviconData[str(i)]['name']}-favicon](https://raw.githubusercontent.com/monkeytype-hub/monkeytype-icon/master/monkeytype-icon/svg/{faviconData[str(i)]['name']}.svg) | `https://raw.githubusercontent.com/monkeytype-hub/monkeytype-icon/master/monkeytype-icon/svg/{faviconData[str(i)]['name']}.svg` |\n"
 
     with open("./asset/docs/icon-table.md", "w") as icon_table:
         icon_table.write(iconTable)
