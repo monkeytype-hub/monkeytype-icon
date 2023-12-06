@@ -71,6 +71,11 @@ def generateMonkeytypeLogoIcon():
 
         data = response.json()
 
+        for i in range(len(data)):
+            for j in range(i + 1, len(data)):
+                if data[i]['name'] > data[j]['name']:
+                    data[i], data[j] = data[j], data[i]
+
         logoSVG = """
             <svg
                 xmlns="http://www.w3.org/2000/svg"
