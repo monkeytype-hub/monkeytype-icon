@@ -24,13 +24,15 @@ def getMonkeytypeFaviconJson():
 
         browser.close()
 
-    soup = BeautifulSoup(full_html, 'html.parser')
+    soup = BeautifulSoup(full_html, "html.parser")
     monkeytypeIconJson = soup.find(id="faviconImageData").get_text()
     monkeytypeIconJson = json.loads(monkeytypeIconJson)
     monkeytypeIconJson = json.dumps(monkeytypeIconJson, indent=4)
 
     with open("./monkeytype-icon.json", "w") as json_file:
         json_file.write(monkeytypeIconJson)
+
+    print("Monkeytype icon json file generated successfully.")
 
 
 def downloadMonkeytypeFavicon():
@@ -42,21 +44,19 @@ def downloadMonkeytypeFavicon():
     faviconData = dict(faviconData)
 
     for i in range(len(faviconData)):
-        svg_binary_data = base64.b64decode(
-            faviconData[str(i)]['svgData'].split(',')[1])
+        svg_binary_data = base64.b64decode(faviconData[str(i)]["svgData"].split(",")[1])
 
-        png_binary_data = base64.b64decode(
-            faviconData[str(i)]['pngData'].split(',')[1])
+        png_binary_data = base64.b64decode(faviconData[str(i)]["pngData"].split(",")[1])
 
         svg_filename = f'{faviconData[str(i)]["name"]}.svg'
         png_filename = f'{faviconData[str(i)]["name"]}.png'
 
-        with open(f'./monkeytype-icon/svg/{svg_filename}', 'wb') as f:
+        with open(f"./monkeytype-icon/svg/{svg_filename}", "wb") as f:
             f.write(svg_binary_data)
 
         print(f"Image '{svg_filename}' downloaded successfully.")
 
-        with open(f'./monkeytype-icon/png/{png_filename}', 'wb') as f:
+        with open(f"./monkeytype-icon/png/{png_filename}", "wb") as f:
             f.write(png_binary_data)
 
         print(f"Image '{png_filename}' downloaded successfully.")
@@ -73,7 +73,7 @@ def generateMonkeytypeLogoIcon():
 
         for i in range(len(data)):
             for j in range(i + 1, len(data)):
-                if data[i]['name'] > data[j]['name']:
+                if data[i]["name"] > data[j]["name"]:
                     data[i], data[j] = data[j], data[i]
 
         logoSVG = """
@@ -124,18 +124,18 @@ def generateMonkeytypeLogoIcon():
             themeName = i["name"]
             mainColor = i["mainColor"]
             bgColor = i["bgColor"]
-            
+
             svg = logoSVG.replace("mainColor", mainColor)
             svg = svg.replace("bgColor", bgColor)
 
-            with open(f'./monkeytype-icon/logo-svg/{themeName}.svg', 'w') as f:
+            with open(f"./monkeytype-icon/logo-svg/{themeName}.svg", "w") as f:
                 f.write(svg)
 
             print(f"Image '{themeName}' generate successfully.")
 
             logoIconTable += f"| {themeName} | ![{themeName}-logo-icon](https://raw.githubusercontent.com/monkeytype-hub/monkeytype-icon/master/monkeytype-icon/logo-svg/{themeName}.svg) | `https://raw.githubusercontent.com/monkeytype-hub/monkeytype-icon/master/monkeytype-icon/logo-svg/{themeName}.svg` |\n"
 
-        with open(f'./asset/docs/logo-icon-table.md', 'w') as f:
+        with open(f"./asset/docs/logo-icon-table.md", "w") as f:
             f.write(logoIconTable)
 
     except requests.exceptions.RequestException as e:
